@@ -44,22 +44,23 @@ class MainCanvas extends Canvas
 	if(action==LEFT){
 		currentImg=img1;
 		System.out.println("向左转");
-		repaint();
+		
 	}
 	if(action==RIGHT){
 		currentImg=img2;
 		System.out.println("向右转");
-		repaint();
+		
 	}
 	if(action==UP){
 		currentImg=img3;
 		System.out.println("向上转");
-		repaint();
+		
 	}
 	if(action==DOWN){
 		currentImg=img;
 		System.out.println("向下转");
-		repaint();
+		
 	}
+	repaint();
 	}
 }
