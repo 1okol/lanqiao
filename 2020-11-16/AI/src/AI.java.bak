@@ -23,6 +23,7 @@ public class AI extends MIDlet
 class MainCanvas extends Canvas
 {
 	int pre=LEFT;
+	int count;
 	int x=120,y=100;
 	Image dowImg,leftImg,rightImg,upImg,currentImg;
 	Image [] dow,left,right,up,current;
@@ -84,7 +85,7 @@ class MainCanvas extends Canvas
 		}else{
 			i=0;
 			currentImg=dowImg;
-		}
+		}	
 	}
 	pre=action;
 	repaint();
