@@ -25,6 +25,7 @@ class MainCanvas extends Canvas
 	int i=0;
 	int pre=LEFT;
 	int x=120,y=100;
+	int prex=120,prey=100;
 	Image dowImg,leftImg,rightImg,upImg,currentImg;
 	Image [][]image=new Image[4][4];
 	public MainCanvas(){
@@ -73,7 +74,7 @@ class MainCanvas extends Canvas
 	}
 	if(action==UP){
 		if(pre==UP){
-			currentImg=image[3][(i++)%2==1?2:0];
+			currentImg=image[3][(i++)%4];
 			this.y=this.y-4;
 		}else{
 			i=0;
@@ -82,12 +83,19 @@ class MainCanvas extends Canvas
 	}
 	if(action==DOWN){
 		if(pre==DOWN){
-			currentImg=image[0][(i++)%2==1?2:0];
+			currentImg=image[0][(i++)%4];
 			this.y=this.y+4;
 		}else{
 			i=0;
 			currentImg=image[0][1];
 		}
+	}
+	if(x>220||y>265||x<0||y<0){
+		x=prex;
+		y=prey;
+	}else{
+		prex=x;
+		prey=y;
 	}
 	pre=action;
 	repaint();
